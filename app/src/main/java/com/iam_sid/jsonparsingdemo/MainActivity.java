@@ -118,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(Void Result) {
             super.onPostExecute(Result);
             lv.setAdapter(new CustomAdap(getApplicationContext(),numbers,emails));
+
         }
     }
 }
