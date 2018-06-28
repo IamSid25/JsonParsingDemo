@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                 try{
                     JSONObject jsonObj=new JSONObject(jsonStr);
 
-                    JSONArray contacts=jsonObj.getJSONArray("Contacts");
+                    JSONArray contacts=jsonObj.getJSONArray("contacts");
 
                     for(int i=0;i<contacts.length();i++)
                     {
@@ -81,16 +81,16 @@ public class MainActivity extends AppCompatActivity {
                         String id=c.getString("id");
                         String name=c.getString("name");
                         String email=c.getString("email");
-                        String address=c.getString("Address");
+                        String address=c.getString("address");
                         String gender=c.getString("gender");
 
-                        JSONObject phone=c.getJSONObject("Phone");
+                        JSONObject phone=c.getJSONObject("phone");
                         String mobile=phone.getString("mobile");
                         String home=phone.getString("home");
-                        String office=phone.getString("phone");
+                        String office=phone.getString("office");
 
                         numbers.add(mobile);
-                        numbers.add(email);
+                        emails.add(email);
                     }
                 }catch (final JSONException e)
                 {
